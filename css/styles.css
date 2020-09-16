@@ -101,6 +101,7 @@ img {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  cursor: pointer;
   transition: background-color 0.2s ease,
     color 0.2s ease,
     opacity 0.2s ease;
@@ -473,8 +474,8 @@ img {
 /* SERVICES */
 
 .services {
-  padding-bottom: 300px;
-  background-color: lightgreen;
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
 
 .services__container {
@@ -604,4 +605,40 @@ img {
   flex-grow: 1;
   display: flex;
   align-items: center;
+}
+
+/* SUBSCRIPTION */
+
+.subscription {
+  padding: 198px 0 153px;
+  background-image: url("../img/subscription-bg.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: auto 100%;
+  /* background-position: right center; */
+  /* background-size: cover; */
+}
+
+.subscription__form {
+  display: flex;
+}
+
+.subscription__input {
+  width: 335px;
+  padding: 15px;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  outline: 0;
+}
+
+/* .subscription__input:focus:invalid { */
+
+.subscription__input:not(:placeholder-shown):invalid {
+  border-color: red;
+  color: red;
+}
+
+.subscription__input:valid {
+  border-color: green;
+  color: green;
 }
